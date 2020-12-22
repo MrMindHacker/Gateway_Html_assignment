@@ -11,9 +11,11 @@ using Microsoft.AspNetCore.Hosting;
 using Assignment_2_dotnet_core.ViewModels;
 using System.IO;
 using Assignment_2_dotnet_core.Logging;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Assignment_2_dotnet_core.Controllers
 {
+    [Authorize]
     public class EmployeesController : Controller
     {
         static readonly log4net.ILog _log4net = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
